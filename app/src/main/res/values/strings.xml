@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NFCard</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_storage">Storage</string>
+    <string name="title_activity_storage_page">StoragePage</string>
+    <string name="title_activity_read_card_page">ReadCardPage</string>
+    <string name="title_activity_card_information_page">CardInformationPage</string>
+    <string name="title_activity_add_card_page">AddCardPage</string>
+    <string name="title_activity_run_card_page">RunCardPage</string>
+    <string name="title_activity_main">MainActivity</string>
+</resources>

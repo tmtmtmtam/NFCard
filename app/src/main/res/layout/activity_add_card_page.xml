@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            />
+    </android.support.design.widget.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/takePhotoImageView"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/appbar"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/camera1" />
+
+    <EditText
+        android:id="@+id/cardNameEdit"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/takePhotoImageView"
+        android:layout_marginTop="260dp"
+        android:hint="Card Name"
+        android:textSize="16dp" />
+
+    <EditText
+
+        android:id="@+id/tagEdit"
+        android:hint="Card Tag"
+        android:textSize="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/cardNameEdit"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content" />
+
+    <Switch
+        android:id="@+id/wifiSwitch"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tagEdit"
+        android:layout_below="@+id/tagEdit"
+        android:layout_marginTop="20dp"
+        android:textSize="16dp"
+
+        android:text="Wifi Action" />
+
+    <Switch
+        android:id="@+id/bluetoothSwitch"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/cardNameEdit"
+        android:layout_below="@+id/wifiCB"
+        android:textSize="16dp"
+
+        android:text="Bluetooth Action" />
+
+    <Switch
+        android:id="@+id/vibrateSwitch"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/cardNameEdit"
+        android:layout_below="@+id/bluetoothCB"
+        android:textSize="16dp"
+        android:text="Vibrate Action" />
+
+    <CheckBox
+        android:id="@+id/wifiCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/cardNameEdit"
+        android:layout_alignTop="@+id/wifiSwitch" />
+
+    <CheckBox
+        android:id="@+id/bluetoothCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/cardNameEdit"
+        android:layout_below="@+id/wifiCB" />
+    <CheckBox
+        android:id="@+id/vibrateCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/cardNameEdit"
+        android:layout_below="@+id/bluetoothCB" />
+    <CheckBox
+        android:id="@+id/urlCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/cardNameEdit"
+        android:layout_below="@+id/vibrateCB" />
+
+    <EditText
+        android:id="@+id/urlEdit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/cardNameEdit"
+        android:layout_below="@+id/urlCB"
+        android:ems="8"
+        android:inputType="textPersonName"
+        android:textSize="16sp"
+        android:hint="Url" />
+
+    <Button
+        android:id="@+id/createObjBT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/urlEdit"
+        android:layout_centerHorizontal="true"
+        android:text="Create"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/urlTextView"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/wifiSwitch"
+        android:layout_below="@+id/vibrateCB"
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/background_dark"
+        android:text="Open an Url"
+        android:textSize="16dp" />
+</RelativeLayout>
