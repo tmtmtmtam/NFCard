@@ -71,7 +71,6 @@ public class ReadCardPage extends AppCompatActivity {
             public void onClick(View v){
                 Intent intent = new Intent(getApplicationContext(), AddCardPage.class);
                 intent.putExtra("UID", string.toString());
-                intent.putExtra("adapter", intent.getSerializableExtra("adapter"));
                 startActivityForResult(intent, REQUEST_CODE);
             }
         });
@@ -149,9 +148,7 @@ public class ReadCardPage extends AppCompatActivity {
     }
 
 
-    private void loadImageFromStorage(String path, ImageView imageView, String name )
-    {
-
+    private void loadImageFromStorage(String path, ImageView imageView, String name ){
         try {
             File f = new File(path, name + ".jpg");
             Bitmap b = BitmapFactory.decodeStream(new FileInputStream(f));
